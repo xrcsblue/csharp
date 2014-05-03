@@ -16,8 +16,8 @@ namespace OOP.Stack
         {
             if (Index < MaxSize)
             {
-                Index++;
-                Storage[Index] = t;
+               Storage[Index] = t;
+               Index++;
             }
             else throw new Exception("Stack Overflow");
         }
@@ -27,8 +27,8 @@ namespace OOP.Stack
 
             if (Index > 0)
             {
-                var v = Storage[Index];
                 Index--;
+                var v = Storage[Index];
                 return v;
             }
             throw new Exception("Underflow");
